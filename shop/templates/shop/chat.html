@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/chat.css' %}">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <div class="container">  
+        <form id="contact" action="" method="post">
+            {% csrf_token %}
+            <h3>CHECK THE DETAILS</h3><br>
+          <fieldset>
+            <label  class='label' tabindex="3" required>Number--{{number}}</label>
+          </fieldset>
+          <fieldset>
+            <label class="label" tabindex="3" required>Message-content---{{msg}}</label>
+          </fieldset>
+          <fieldset>
+            <a class="submit" href="https://wa.me/+91{{number}}?iamdanny=I'm%20interested%20in%20your%20car%20for%20sale" style="text-decoration:none ;">SEND</a>
+          </fieldset>
+        </form>
+      </div>
+</body>
+</html>

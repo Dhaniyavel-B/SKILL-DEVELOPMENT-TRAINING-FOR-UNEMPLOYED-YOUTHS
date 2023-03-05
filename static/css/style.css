@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Noto+Sans:ital,wght@0,300;0,400;0,500;1,700&family=Roboto+Slab&display=swap');
+
+.carousel-item img {
+    object-fit:cover;
+    object-position:top;
+    height:60vh;
+    overflow:hidden;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.old_price{
+    font-weight:bold;
+    color:red;
+}
+
+.new_price{
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    padding: 2px;
+}
+
+.pic-box {
+    position: relative;
+  }
+  
+.hot {
+    background-color: orangered;
+    color: white;
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 10;
+}
+
+.nav-des{
+    background: #ff00cc;  
+background: -webkit-linear-gradient(to top, #333399, #ff00cc);  
+background: linear-gradient(to top, #333399, #ff00cc); 
+
+}

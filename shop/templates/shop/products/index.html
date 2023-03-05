@@ -1,0 +1,41 @@
+{% extends 'shop/layouts/main.html' %}
+{% block title %}
+    Home | shopkart
+{% endblock title %}
+
+{% block content %}
+<section class="bg-light py-4 my-5" style="min-height:600px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="mb-3">{{category_name}} Products</h4>
+          <hr style="border-color:#b8bfc2;">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{category_name}}</li>
+            </ol>
+          </nav>
+          {% include 'shop/inc/message.html' %}
+        </div>
+        {% for item in products %}
+        <div class="col-md-4 col-lg-3">
+            <div class="card my-3">
+                <a href="{% url 'product_details' category_name item.name %}" type="text/css">
+                    <div class="card-body">
+                        <h5 class="class-title text-primary" style="text-align: center;">{{ item.name }}</h5><br><br>
+                        <h6 class="class-title text-primary content" style="color: black;">{{ item.description }}</h6><br><br>
+                        <p class="card-text">
+                           <span class="float-start old_price"><s> </s></span>
+                           <button class="btn btn-primary" id="btnCart" style="position: relative;bottom: 5px;"><i class="fa fa-book" aria-hidden="true"></i>Take Course</button>
+                           <span class="float-end new_price">Chapter {{ item.chapter }} </span>
+                        </p>  
+                    </div>
+                </a>
+        </div>
+        </div>
+          {% endfor %}
+      </div>  
+    </div>
+</section>
+{% endblock content %}
